@@ -9,5 +9,32 @@ const arrayAnswers = ["eco", "sombra", "40", "escuridão", "âncora", "palavras"
 
 let random = Math.trunc((Math.random() * arrayCharades.length)); // pega um index aleatório
 console.log(random);
+let saveRandom = random;
 
 charade.innerText = arrayCharades[random];
+
+const button = document.getElementById("button");
+const inputAnswerBox = document.getElementById("input-container");
+
+function inputAnswerInBox () {
+    let answer = inputAnswerBox.value;
+    let result = answer.toLowerCase();
+
+    return result
+}
+inputAnswerBox.addEventListener("input", inputAnswerInBox);
+
+function verifyAnswer(event) {
+    let answer = inputAnswerInBox();
+    let correctAnswer = arrayAnswers[saveRandom];
+
+    console.log("correct answer =" + correctAnswer);
+    if (answer === correctAnswer) {
+        alert("Parabéns!!!! Você acertou!!!")
+    } else {
+        alert ("Que pena, sua resposta está errada.")
+    }
+    
+
+}
+button.addEventListener("click", verifyAnswer);
