@@ -1,5 +1,10 @@
 const notificationResult = document.getElementById("notification-result");
-notificationResult.style.visibility = "hidden";
+
+
+function hideNotification () {
+    notificationResult.style.visibility = "hidden";
+}
+hideNotification();
 
 const description = document.getElementById("description");
 const textDescription =  "\"Você se encontra de frente ao tesouro da grande esfinge. Para abrir a passagem e obter todo o seu ouro e riqueza tudo o que você precisa fazer é acertar a uma charada.\"";
@@ -33,22 +38,33 @@ inputAnswerBox.addEventListener("input", inputAnswerInBox);
 function verifyAnswer(event) {
     let answer = inputAnswerInBox();
     let correctAnswer = arrayAnswers[saveRandom];
+    let getNotificationText = document.getElementById("#notification");
+
+    if (getNotificationText !== null) {
+        getNotificationText.innerText = "";
+    } else {
+
+    }
+
     
 
     console.log("correct answer =" + correctAnswer);
-    if (answer === correctAnswer) {
-               
+    if (answer === correctAnswer) {               
         const container = document.getElementById("container");
-        const notification = document.createElement("p");
+        const notification = document.getElementById("notification")
 
         
         notification.innerText = "Parabéns!!!! Você acertou!!!";
-        console.log(notification.innerText);
         notificationResult.appendChild(notification);
         notificationResult.style.visibility = "";
-
+        
     } else {
-        alert ("Que pena, sua resposta está errada.")
+        const container = document.getElementById("container");
+        const notification = document.getElementById("notification")
+
+        notification.innerText = "Que pena, sua resposta está errada.";
+        notificationResult.appendChild(notification);
+        notificationResult.style.visibility = "";
     }
     
 
