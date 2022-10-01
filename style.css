@@ -25,18 +25,19 @@
 }
 
 #container {
-    background-image: url("./images/por-do-sol-deserto.jpg");
+    background-image: url("./images/background-projeto.png");
     background-size: cover;
-    width: 60%;
-    height: 60%;
+    width: 900px;
+    height: 620px;
     margin: auto;
+    padding-top: 20px;
 }
 
-#sphinx {
-    background-image: url("./images/imagem-esfinge.png");
-    background-size: cover;
-    block-size: 600px;
+#charade {
+    width: 80%;
+    text-align: center;
     margin: auto;
-    width: 100%;
-    z-index: 999;
+    font-size: 18px;
+    font-family:cursive;
+    font-weight: 900;
 }
