@@ -39,6 +39,7 @@ body {
 
 #container {
     background-image: url("./images/background-projeto.png");
+    position: relative;
     background-size: cover;
     width: 900px;
     height: 620px;
@@ -59,10 +60,16 @@ body {
     border: 3px solid black;
 }
 
+#section-answer {
+    position:absolute;
+    bottom: 25%;
+    margin-left: 330px;
+    z-index: 999;
+}
 #input-answer {
-    width: 30%;
+    width: 250px;
     margin: auto;
-    margin-top: 35%;
+    /* margin-top: 15%; */
 }
 #input-container {
     text-align: center;
@@ -71,7 +78,7 @@ body {
 }
 
 #button-answer {
-    width: 14%;
+    width: 120px;
     margin: auto;
 }
 #button {
@@ -86,6 +93,22 @@ body {
     font-weight: 900;
     color: white;
     text-align: center;
+}
+
+#notification-result {
+    font-size: 18px;
+    font-weight: 900;
+
+    margin: auto;
+    margin-top: 10%;
+    width: max-content;
+    height: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 #footer-page {
