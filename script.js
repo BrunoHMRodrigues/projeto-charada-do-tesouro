@@ -70,3 +70,14 @@ function verifyAnswer(event) {
 
 }
 button.addEventListener("click", verifyAnswer);
+
+const buttonNew = document.getElementById("button-new");
+
+function newCharade() {
+    const notification = document.getElementById("notification")
+
+    notification.innerText = "";
+    hideNotification();
+    getRandomCharade();
+}
+buttonNew.addEventListener("click", newCharade)
