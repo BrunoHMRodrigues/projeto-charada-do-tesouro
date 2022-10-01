@@ -46,18 +46,14 @@ function verifyAnswer(event) {
 
     }
 
-    
-
     console.log("correct answer =" + correctAnswer);
     if (answer === correctAnswer) {               
         const container = document.getElementById("container");
         const notification = document.getElementById("notification")
-
         
         notification.innerText = "Parabéns!!!! Você acertou!!!";
         notificationResult.appendChild(notification);
-        notificationResult.style.visibility = "";
-        
+        notificationResult.style.visibility = "";        
     } else {
         const container = document.getElementById("container");
         const notification = document.getElementById("notification")
@@ -66,8 +62,6 @@ function verifyAnswer(event) {
         notificationResult.appendChild(notification);
         notificationResult.style.visibility = "";
     }
-    
-
 }
 button.addEventListener("click", verifyAnswer);
 
@@ -75,7 +69,9 @@ const buttonNew = document.getElementById("button-new");
 
 function newCharade() {
     const notification = document.getElementById("notification")
+    const input = document.getElementById("input-container")
 
+    input.value = "";
     notification.innerText = "";
     hideNotification();
     getRandomCharade();

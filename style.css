@@ -31,10 +31,13 @@ body {
     margin: auto;
     margin-bottom: 40px;
 
-    font-size: 26px;
+    font-size: 34px;
     font-family:cursive;
     font-weight: 900;
     text-align: center;
+    background: -webkit-linear-gradient(#314085, #246097);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #container {
