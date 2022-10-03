@@ -65,6 +65,14 @@ function verifyAnswer(event) {
 }
 button.addEventListener("click", verifyAnswer);
 
+function verificarEnter (event) {
+    if (event.key === "Enter") {
+        verifyAnswer();
+      }
+}
+
+inputAnswerBox.addEventListener("keypress", verificarEnter)
+
 const buttonNew = document.getElementById("button-new");
 
 function newCharade() {
